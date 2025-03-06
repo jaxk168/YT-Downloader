@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #ffffff;  /* White background for the rest of the page */
+    color: #222;  /* Default text color */
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(45deg, #ADD8E6, #9b59b6);  /* Light Blue to Purple Gradient for header */
+    color: white;
+    padding: 40px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 10px 20px rgba(0, 71, 171, 0.7);  /* Glowing effect below header */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Header Content (Profile Image and Name) */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;  /* Space between image and name */
+}
+
+/* Profile Image (Circle Shape) */
+.profile-img {
+    width: 100px;  /* Size of the image */
+    height: 100px;
+    border-radius: 50%;  /* Makes the image circular */
+    object-fit: cover;  /* Ensures the image is cropped to fit the circle */
+    border: 5px solid white;  /* Optional: white border around the image */
+}
+
+/* My Name (h1) */
+h1 {
+    color: #0047AB;  /* Darker Blue for "My Name" */
+    text-shadow: 0px 0px 8px rgba(0, 71, 171, 0.5);  /* Soft Glow */
+    transition: all 0.3s ease-in-out;
+}
+
+h1:hover {
+    color: #800080;  /* Purple color on hover */
+    text-shadow: 0px 0px 15px rgba(128, 0, 128, 0.8);  /* Purple glow effect */
+    transform: scale(1.1);  /* Slight Zoom Effect */
+}
+
+/* Glowing Boxes with Hover Animation */
+.glow-box {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 150, 136, 0.5);
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease-in-out;
+}
+
+.glow-box:hover {
+    box-shadow: 0px 0px 30px rgba(0, 150, 136, 0.7);
+    transform: translateY(-5px);  /* Moves up slightly */
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 50%;  /* Makes the icons circular */
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    width: 60px;  /* Set the width of the circle */
+    height: 60px;  /* Set the height of the circle */
+    line-height: 60px;  /* Vertically align text */
+    border: 2px solid transparent;  /* Default border */
+}
+
+/* Individual Social Media Styles */
+.youtube {
+    background: #FF0000;  /* YouTube Red */
+}
+
+.facebook {
+    background: #1877F2; /* Facebook Blue */
+}
+
+.telegram {
+    background: #0088cc; /* Telegram Blue */
+}
+
+.github {
+    background: #24292e; /* GitHub Dark */
+}
+
+/* Social Media Icons Hover Effects (Glow Match) */
+.youtube:hover {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.5); /* Stronger YouTube Red Glow */
+    border: 2px solid #FF0000;  /* Red border to match the glow */
+    transform: scale(1.1);  /* Slight zoom effect */
+    animation: glow-pulse 1.5s infinite; /* Added pulse animation */
+}
+
+.facebook:hover {
+    box-shadow: 0 0 15px rgba(24, 119, 242, 0.8), 0 0 30px rgba(24, 119, 242, 0.5); /* Stronger Facebook Blue Glow */
+    border: 2px solid #1877F2;  /* Blue border to match the glow */
+    transform: scale(1.1);
+    animation: glow-pulse 1.5s infinite; /* Added pulse animation */
+}
+
+.telegram:hover {
+    box-shadow: 0 0 15px rgba(0, 136, 204, 0.8), 0 0 30px rgba(0, 136, 204, 0.5); /* Stronger Telegram Blue Glow */
+    border: 2px solid #0088cc;  /* Blue border to match the glow */
+    transform: scale(1.1);
+    animation: glow-pulse 1.5s infinite; /* Added pulse animation */
+}
+
+.github:hover {
+    box-shadow: 0 0 15px rgba(36, 41, 46, 0.8), 0 0 30px rgba(36, 41, 46, 0.5); /* Stronger GitHub Dark Glow */
+    border: 2px solid #24292e;  /* Dark border to match the glow */
+    transform: scale(1.1);
+    animation: glow-pulse 1.5s infinite; /* Added pulse animation */
+}
+
+/* Pulsing Glow Animation */
+@keyframes glow-pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.5); /* Start with strong glow */
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 0, 0, 1), 0 0 50px rgba(255, 0, 0, 0.6); /* Expand and intensify */
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.5); /* Shrink back to normal */
+    }
+}
+
+/* Background Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Apply zoom effect to all text elements */
+h1, h2, p, a {
+    transition: transform 0.3s ease-in-out;
+}
+
+h1:hover, h2:hover, p:hover, a:hover {
+    transform: scale(1.1);  /* Slight Zoom Effect on Hover */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-links a {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
